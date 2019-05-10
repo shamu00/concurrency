@@ -1,0 +1,8 @@
+
+-> StringBuilder --- StringBuffer
+
+-> SimpleDateFormat --- JodaTime
+
+-> ArrayList, HashSet, HashMap 等Collections
+
+-> 先检查再执行, if(condition(a)) { handle(a); }

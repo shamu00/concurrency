@@ -1,0 +1,25 @@
+
+-> ArrayList -- CopyOnWriteArrayList
+    在进行读写操作的时候, 先拷贝一份副本出来, 在副本上面进行写操作, 写完之后再将原来的数组引用指向新的数组
+    在锁的保护下进行的, 为了避免在并发的时候拷贝了多份副本出来, 适合读多写少的场景
+    读写分离, 让读和写分开
+    读操作不需要加锁, 写操作需要加锁
+
+    缺点: 会消耗内存, 可能会导致GC  不能用于实时读的场景
+
+-> HashSet -- CopyOnWriteArraySet
+
+-> TreeSet -- ConcurrentSkipListSet
+    支持自然排序, 基于Map集合, 不能保证批量操作的时候不会被其他线程打断, 例如addAll
+
+-> HashMap -- ConcurrentHashMap
+    不允许空值, 针对于读操作有大量的优化
+
+-> TreeMap -- ConcurrentSkipListMap
+    使用SkipList(跳表)来实现
+    key有序, 支持更高的并发
+
+
+J.U.C
+
+包括 tools, locks, atomic, collections, executor

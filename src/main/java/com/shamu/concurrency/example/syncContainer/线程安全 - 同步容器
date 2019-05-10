@@ -1,0 +1,6 @@
+
+-> ArrayList - Vector, Stack
+
+-> HashMap - HashTable(key, value不能为null)
+
+-> Collections.synchronizedXXX(List, Set, Map)
