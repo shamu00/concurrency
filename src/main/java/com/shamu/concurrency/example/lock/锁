@@ -1,0 +1,23 @@
+
+-> Synchronized
+    少量竞争者的时候
+
+下面的锁如果使用不当, 会造成死锁操作
+-> ReentrantLock
+    增长趋势是可以预估的时候
+
+-> ReentrantReadWriteLock
+
+-> StampedLock
+
+
+
+区别
+->        ReentrantLock      和      synchronized的区别
+锁的实现  JDK实现(可阅源码)           JVM实现
+性能区别  以前比较快                  借鉴了CAS技术(避免进入内核态的阻塞)
+功能区别  需要手动释放锁              比较方便简介
+
+Reen锁   可以指定是否公平            非公平
+独有功能 提供Condition类,实现分组唤醒
+         能够终端等待锁(lock.lockInterruptibly)

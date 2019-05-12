@@ -23,3 +23,6 @@
 J.U.C
 
 包括 tools, locks, atomic, collections, executor
+
+CountDownLatch ->   使用一个cnt计数器, 调用await()的线程会阻塞直到cnt == 0的时候恢复(resume)
+                    其他线程使用countDown, 能使得cnt自减

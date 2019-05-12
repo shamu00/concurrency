@@ -1,0 +1,22 @@
+
+-> Methods
+
+                  异常             T / F           阻塞        T / F
+-           Throw Exception     Spec Value      Blocks      Time Out
+
+Insert          add(o)           offer(o)        put(o)      offer(o, timeout, timeunit)
+
+Remove          remove(o)        poll(o)         take(o)     poll(timeout, timeunit)
+
+Examime         element()        peek()
+
+
+-> ArrayBlockingQueue 有限的阻塞队列 FIFO
+
+-> DelayQueue   要实现Delay接口, 要进行排序, 使用lock和priorityQueue
+
+-> LinkedBlockingQueue 有限/无限阻塞队列 FIFO
+
+-> PriorityBlockingQueue 无边界, 有排序规则, 允许插入NULL, 要实现Comparable接口
+
+-> SynchronousQueue 只允许容纳一个线程, 同步队列, 无界非缓存队列
